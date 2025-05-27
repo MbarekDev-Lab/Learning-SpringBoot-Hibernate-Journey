@@ -8,27 +8,35 @@
 		<version>3.5.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
+
 	<groupId>com.MbarekDev-Lab</groupId>
 	<artifactId>springboot-journey</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
 	<name>LearningSpringBootHibernateJourney</name>
 	<description>My journey with Spring Boot, Spring Data JPA, Hibernate, and MySQL</description>
+
 	<url/>
+
 	<licenses>
 		<license/>
 	</licenses>
+
 	<developers>
 		<developer/>
 	</developers>
+
 	<scm>
 		<connection/>
 		<developerConnection/>
 		<tag/>
 		<url/>
 	</scm>
+
 	<properties>
 		<java.version>24</java.version>
 	</properties>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
