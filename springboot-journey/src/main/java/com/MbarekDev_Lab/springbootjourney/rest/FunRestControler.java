@@ -11,4 +11,16 @@ public class FunRestControler {
         return "hello Mbarek";
     }
 
+    // Exposing 2 endpoints beneath base path '/actuator'
+    @GetMapping("/workout")
+    public String getDailyWorkout() {
+        return "run a hard 4k";
+    }
+
+    @GetMapping("/fortune")
+    public String getDailyFortune() {
+        return "Today is your lucky day .";
+    }
+
+
 }
