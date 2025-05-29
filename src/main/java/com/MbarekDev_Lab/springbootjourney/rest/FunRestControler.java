@@ -35,5 +35,4 @@ public class FunRestControler {
         return "Today is your lucky day .";
     }
 
-
 }
