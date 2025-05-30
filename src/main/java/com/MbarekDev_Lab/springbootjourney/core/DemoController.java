@@ -7,16 +7,20 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
-    private final Coach coach;
+    private Coach coach;
 
-    @Autowired // can be omitted in Spring Boot 2.6+
+    /*@Autowired // define an constructor for dependency injection
     public DemoController(Coach coach) {
         this.coach = coach;
-    }
+    }*/
 
     @GetMapping("/dailytraining")
     public String getDailytraining() {
         return coach.getDailyWorkout();
     }
 
+    @Autowired
+    public void setCoach(Coach coach) {
+        this.coach = coach;
+    }
 }
