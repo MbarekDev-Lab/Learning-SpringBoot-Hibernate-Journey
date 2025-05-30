@@ -1,5 +1,6 @@
 package com.MbarekDev_Lab.springbootjourney.core;
 
+import outerpackge.utils.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

@@ -1,4 +1,4 @@
-package com.MbarekDev_Lab.springbootjourney.core;
+package outerpackge.utils;
 
 public interface Coach {
     String getDailyWorkout();
