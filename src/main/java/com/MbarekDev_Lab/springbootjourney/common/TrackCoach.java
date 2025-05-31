@@ -14,15 +14,15 @@ public class TrackCoach implements Coach {
         System.out.println("1. Constructor: TrackCoach");
     }
 
-    @PostConstruct
-    public void init() {
-        System.out.println("2. @PostConstruct: TrackCoach initialized");
-    }
-
-    @PreDestroy
-    public void cleanup() {
-        System.out.println("4. @PreDestroy: TrackCoach cleanup");
-    }
+//    @PostConstruct
+//    public void init() {
+//        System.out.println("2. @PostConstruct: TrackCoach initialized");
+//    }
+//
+//    @PreDestroy
+//    public void cleanup() {
+//        System.out.println("4. @PreDestroy: TrackCoach cleanup");
+//    }
 
     @Override
     public String getDailyWorkout() {
