@@ -10,17 +10,26 @@ public class DemoController {
   //  ExecutorService hhh = Executors.newVirtualThreadPerTaskExecutor();
     //@Autowired
     private final Coach coach;
+    private final Coach coach2;
 
     // Constructor injection (preferred)
     @Autowired // define a constructor for dependency injection
-    public DemoController(@Qualifier("trackCoach") Coach coach) {
+    public DemoController(
+            @Qualifier("trackCoach") Coach coach,
+            @Qualifier("trackCoach") Coach coach2) {
       System.out.println("in constructor : " + getClass().getSimpleName());
         this.coach = coach;
+        this.coach2 = coach2;
     }
 
     @GetMapping("/dailytraining")
     public String getDailytraining() {
         return coach.getDailyWorkout();
+    }
+
+    @GetMapping("/check")
+  public String check(){
+      return "Compare beans : " + (coach == coach2);
     }
 
 //    @Autowired // Setter Injection (when you need to inject optional dependencies)
