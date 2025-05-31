@@ -1,26 +1,29 @@
 package com.MbarekDev_Lab.springbootjourney.core;
 
-import outerpackge.utils.Coach;
+import com.MbarekDev_Lab.springbootjourney.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
-    private Coach coach;
+    //@Autowired
+    private final Coach coach;
 
-    /*@Autowired // define an constructor for dependency injection
-    public DemoController(Coach coach) {
+    // Constructor injection (preferred)
+    @Autowired // define a constructor for dependency injection
+    public DemoController(@Qualifier("trackCoach") Coach coach) {
         this.coach = coach;
-    }*/
+    }
 
     @GetMapping("/dailytraining")
     public String getDailytraining() {
         return coach.getDailyWorkout();
     }
 
-    @Autowired
-    public void setCoach(Coach coach) {
-        this.coach = coach;
-    }
+//    @Autowired // Setter Injection (when you need to inject optional dependencies)
+//    public void setCoach(Coach coach) {
+//        this.coach = coach;
+//    }
 }

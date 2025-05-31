@@ -1,4 +1,4 @@
-package outerpackge.utils;
+package com.MbarekDev_Lab.springbootjourney.common;
 
 import org.springframework.stereotype.Component;
 
@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class CricketCoach implements Coach {
     @Override
     public String getDailyWorkout() {
-        return "Practice Java every day!!!!!! :)";
+        return "CricketCoach";
     }
 }
