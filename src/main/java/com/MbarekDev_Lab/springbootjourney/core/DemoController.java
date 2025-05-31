@@ -1,6 +1,5 @@
 package com.MbarekDev_Lab.springbootjourney.core;
 
-import com.MbarekDev_Lab.springbootjourney.common.Coach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,12 +7,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class DemoController {
+  //  ExecutorService hhh = Executors.newVirtualThreadPerTaskExecutor();
     //@Autowired
     private final Coach coach;
 
     // Constructor injection (preferred)
     @Autowired // define a constructor for dependency injection
-    public DemoController(Coach coach) {
+    public DemoController(@Qualifier("trackCoach") Coach coach) {
+      System.out.println("in constructor : " + getClass().getSimpleName());
         this.coach = coach;
     }
 
